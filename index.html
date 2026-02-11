@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NailSilk Studio — Маникюр в Челябинске</title>
+    <meta name="description"
+        content="NailSilk Studio — профессиональный маникюр и педикюр в Челябинске. Маникюр от 800₽. Запишитесь онлайн!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ═══════ HEADER ═══════ -->
+    <header class="header">
+        <div class="container header__inner">
+            <div class="header__brand">
+                <span class="header__logo">NS</span>
+                <div>
+                    <h1 class="header__title">NailSilk Studio</h1>
+                    <p class="header__subtitle">Маникюр от 800₽</p>
+                </div>
+            </div>
+            <a href="#booking" class="btn btn--primary">Записаться</a>
+        </div>
+    </header>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero">
+        <div class="container hero__content">
+            <p class="hero__label">Добро пожаловать</p>
+            <h2 class="hero__heading">Идеальный маникюр<br>для ваших рук</h2>
+            <p class="hero__text">Профессиональный уход, стерильные инструменты и&nbsp;внимание к&nbsp;каждой детали.
+                Ваши ногти заслуживают лучшего.</p>
+            <a href="#services" class="btn btn--white">Наши услуги</a>
+        </div>
+        <div class="hero__decor"></div>
+    </section>
+
+    <!-- ═══════ УСЛУГИ ═══════ -->
+    <section class="services" id="services">
+        <div class="container">
+            <p class="section__label">Что мы предлагаем</p>
+            <h2 class="section__title">Наши услуги</h2>
+
+            <div class="services__grid">
+
+                <div class="service-card">
+                    <div class="service-card__icon">💅</div>
+                    <h3 class="service-card__name">Маникюр</h3>
+                    <p class="service-card__desc">Классический или аппаратный маникюр с идеальной формой ногтей</p>
+                    <span class="service-card__price">800 ₽</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">✨</div>
+                    <h3 class="service-card__name">Гель-лак</h3>
+                    <p class="service-card__desc">Стойкое покрытие гель‑лаком — носится до 3&nbsp;недель без сколов</p>
+                    <span class="service-card__price">1 100 ₽</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">🎨</div>
+                    <h3 class="service-card__name">Дизайн</h3>
+                    <p class="service-card__desc">Авторский дизайн: стемпинг, слайдеры, стразы, френч
+                        и&nbsp;не&nbsp;только</p>
+                    <span class="service-card__price">от 200 ₽</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">🦶</div>
+                    <h3 class="service-card__name">Педикюр</h3>
+                    <p class="service-card__desc">Аппаратный педикюр с уходом за кожей стоп и покрытием</p>
+                    <span class="service-card__price">1 500 ₽</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ ФОРМА ═══════ -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <p class="section__label">Свяжитесь с нами</p>
+            <h2 class="section__title">Запишитесь онлайн</h2>
+            <p class="booking__subtitle">Заполните форму, и мы перезвоним вам для подтверждения записи</p>
+
+            <form class="booking__form" id="bookingForm" action="send.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" placeholder="Анна" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Услуга</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="Маникюр — 800₽">Маникюр — 800₽</option>
+                        <option value="Гель-лак — 1100₽">Гель-лак — 1 100₽</option>
+                        <option value="Дизайн — от 200₽">Дизайн — от 200₽</option>
+                        <option value="Педикюр — 1500₽">Педикюр — 1 500₽</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo">NS</span>
+                <span class="footer__name">NailSilk Studio</span>
+            </div>
+            <div class="footer__info">
+                <p>📍 г. Челябинск</p>
+                <p>
+                    <a href="#" class="footer__link" target="_blank" rel="noopener">
+                        💬 Telegram
+                    </a>
+                </p>
+            </div>
+            <p class="footer__copy">© 2026 NailSilk Studio. Демо-сайт.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

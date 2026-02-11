@@ -1,0 +1,437 @@
+/* ══════════════════════════════════════
+   NailSilk Studio — Stylesheet
+   Pink gradient + White, Mobile-first
+   ══════════════════════════════════════ */
+
+/* ── Reset & Base ──────────────────── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3a2a35;
+    background: #fff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ── Typography ────────────────────── */
+.section__label {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d4729a;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2e1a26;
+}
+
+/* ── Buttons ───────────────────────── */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 100, 140, .3);
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, #e8879e, #d4729a);
+    color: #fff;
+}
+
+.btn--white {
+    background: #fff;
+    color: #d4729a;
+}
+
+.btn--full {
+    width: 100%;
+    text-align: center;
+}
+
+/* ══════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════ */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 114, 154, .12);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0a0b8, #d4729a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.header__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2e1a26;
+}
+
+.header__subtitle {
+    font-size: .72rem;
+    color: #d4729a;
+    font-weight: 500;
+}
+
+/* ══════════════════════════════════════
+   HERO
+   ══════════════════════════════════════ */
+.hero {
+    position: relative;
+    background: linear-gradient(160deg, #fce4ec 0%, #f8bbd0 40%, #e8879e 100%);
+    padding: 80px 0 100px;
+    overflow: hidden;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero__label {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .85);
+    margin-bottom: 16px;
+}
+
+.hero__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero__text {
+    font-size: .95rem;
+    color: rgba(255, 255, 255, .9);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.hero__decor {
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 1;
+}
+
+/* ══════════════════════════════════════
+   SERVICES
+   ══════════════════════════════════════ */
+.services {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid rgba(212, 114, 154, .15);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(212, 114, 154, .15);
+}
+
+.service-card__icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+.service-card__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2e1a26;
+    margin-bottom: 8px;
+}
+
+.service-card__desc {
+    font-size: .82rem;
+    color: #7a6070;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-card__price {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    color: #c0577a;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+/* ══════════════════════════════════════
+   BOOKING FORM
+   ══════════════════════════════════════ */
+.booking {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #fdf0f4 0%, #fff 100%);
+}
+
+.booking__subtitle {
+    text-align: center;
+    color: #7a6070;
+    font-size: .9rem;
+    margin-top: -24px;
+    margin-bottom: 40px;
+}
+
+.booking__form {
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #5a3a4a;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid rgba(212, 114, 154, .25);
+    border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    color: #3a2a35;
+    background: #fff;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+    -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d4729a;
+    box-shadow: 0 0 0 3px rgba(212, 114, 154, .12);
+}
+
+.form-group input::placeholder {
+    color: #bba0ae;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════ */
+.footer {
+    background: #2e1a26;
+    color: rgba(255, 255, 255, .7);
+    padding: 40px 0;
+}
+
+.footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0a0b8, #d4729a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.footer__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer__info {
+    display: flex;
+    gap: 24px;
+    font-size: .85rem;
+}
+
+.footer__link {
+    transition: color .2s;
+}
+
+.footer__link:hover {
+    color: #f0a0b8;
+}
+
+.footer__copy {
+    font-size: .72rem;
+    color: rgba(255, 255, 255, .4);
+    margin-top: 8px;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 640px) {
+    .hero {
+        padding: 56px 0 72px;
+    }
+
+    .hero__heading {
+        font-size: 2rem;
+    }
+
+    .hero__text {
+        font-size: .85rem;
+    }
+
+    .section__title {
+        font-size: 1.6rem;
+    }
+
+    .services {
+        padding: 56px 0;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 24px 16px;
+    }
+
+    .service-card__desc {
+        font-size: .78rem;
+    }
+
+    .booking {
+        padding: 56px 0;
+    }
+
+    .header__inner .btn {
+        padding: 10px 20px;
+        font-size: .8rem;
+    }
+
+    .footer__info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+}
